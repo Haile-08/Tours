@@ -41,7 +41,7 @@ function App() {
           <h1 className="mag text-black text-9xl font-mono">bored api</h1>
           <div>
             <h1>Idea = {idea.activity}</h1>
-            <a href={idea.link}></a>
+            <a href={`${idea.link}`}></a>
           </div>
           <button
             className="btn px-12 py-9 bg-blue-800 my-9 rounded-lg"
