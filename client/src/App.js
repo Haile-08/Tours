@@ -5,7 +5,7 @@ import Loading from "./components/Loading";
 
 function App() {
   const [loading, setLoading] = useState(true);
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(null);
 
   useEffect(() => {
     axios({
@@ -34,9 +34,9 @@ function App() {
                 <hr className="bg-blue-500 px-5 py-0.5 mx-8 rounded my-2" />
               </div>
             </div>
-            <div className="h-auto flex-row px-20 justify-center items-center">
-              {data.map((index) => (
-                <Item data={index} key={index.char_id} />
+            <div className="h-auto flex-row px-2 justify-center items-center">
+              {data.map((item) => (
+                <Item data={item} key={item.char_id} />
               ))}
             </div>
           </div>
